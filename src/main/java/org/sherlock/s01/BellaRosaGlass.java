@@ -9,7 +9,7 @@ public class BellaRosaGlass implements WineGlass<Muscat> {
         return new Muscat() {
             @Override
             public String toString() {
-                return "Muscat...mmm... какая гадость, как это можно пить с рыбой...";
+                return "Мускат...mmm... какая гадость, как это можно пить с рыбой...";
             }
         };
     }

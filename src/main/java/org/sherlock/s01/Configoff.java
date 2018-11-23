@@ -1,9 +1,8 @@
 package org.sherlock.s01;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Primary;
 
@@ -14,6 +13,7 @@ import org.springframework.context.annotation.Primary;
 public class Configoff {
 
     @Bean
+    @Qualifier("muscat")
     public WineGlass<Muscat> muscat(){
         return new BellaRosaGlass();
     }
@@ -21,9 +21,11 @@ public class Configoff {
     @Bean
     @Primary
     public WineGlass<WhiteWine> whiteWineGlass(){
-        return new ChardonnayGlass();
+        return new HouseWhiteWineGlass();
     }
+
     @Bean
+    @Qualifier("muscat")
     public Konstantin<Muscat> konstantin(){
         return new Konstantin<>(muscat());
     }

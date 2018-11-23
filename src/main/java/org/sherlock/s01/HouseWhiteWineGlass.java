@@ -2,14 +2,15 @@ package org.sherlock.s01;
 
 /**
  * @author Evgeny Borisov
+ * @contains Frameworkitis
  */
-public class ChardonnayGlass implements WineGlass<WhiteWine> {
+public class HouseWhiteWineGlass implements WineGlass<WhiteWine> {
     @Override
     public WhiteWine getContent() {
         return new WhiteWine() {
             @Override
             public String toString() {
-                return "Chardonnay...mmm... бульк бульк";
+                return "Домашнее вино! Лучшее!...mmm... бульк бульк";
             }
         };
     }
